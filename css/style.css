@@ -1,0 +1,129 @@
+/* google_font */
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Grenze:wght@400;600;700&family=M+PLUS+Code+Latin:wght@400;700&family=Special+Elite&display=swap');
+
+:root{
+    /* color */
+    --color-black: #101010;
+    --color-white: #f9f9f9;
+    --color-darkgray: #666666;
+    --color-lightgray: #cccccc;
+    --color-gold: #ffd700;
+    --color-bg: #dfdac7; 
+
+    /* font-weight */
+    --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
+    --font-weight-Bold: 700;
+
+    /* font-family */
+    --font-family-bokor: 'Bokor', cursive;
+    --font-family-grenze: 'Grenze', serif;
+    --font-family-latin: 'M PLUS Code Latin', sans-serif;
+    --font-family-elite: 'Special Elite', cursive; 
+
+    /* font-size */
+    --font-size-xlarge: 64px;
+    --font-size-large: 40px;
+    --font-size-medium: 24px;
+    --font-size-regular: 18px;
+    --font-size-small: 16px;
+}
+/* Universal Tags */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{padding-left: 0;}
+
+li{list-style: none;}
+
+button{cursor: pointer;}
+
+img{vertical-align: top;}
+
+.inner{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/***************************** start *****************************/
+body{
+    font-size: var(--font-size-regular);
+    background-color: var(--color-bg);
+    width: 100vw;
+}
+
+/* header */
+.header{
+    width: 100%;
+    min-height: 1px;
+    border-bottom: 10px double var(--color-darkgray);
+}
+/* nav */
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+.navbar_head{
+    border-bottom: 1px solid var(--color-darkgray);
+}
+.navbar_head .flex_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 35px 20px;
+}
+.logo > a{
+    display: block;
+    height: var(--font-size-xlarge);
+}
+.logo > a > img{
+    height: inherit;
+}
+.sns_link{
+    display: flex;
+    align-items: center;
+}
+.sns_link > li > a{
+    display: block;
+    padding: 8px 16px;
+    font-size: var(--font-size-medium);
+    transition: all .3s ease-in-out;
+}
+.sns_link > li > a:hover{
+    transform:rotate(30deg) scale(1.2);
+}
+.nav_menu_cover{width: 100%;}
+.nav_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+}
+.nav_menu > li{
+    width: 100%;
+    text-align: center;
+    font-weight: var(--font-weight-semiBold);
+}
+.nav_menu > li > a{
+    display: block;
+    padding: 16px 35px;
+    font-family: var(--font-family-elite);
+    font-size: var(--font-size-regular);
+    transition: all .3s;
+}
+.nav_menu > li > a:hover{
+    text-shadow: 5px 5px 3px rgba(100, 100, 100, 0.7);
+}
+
+/* font family 확인용 */
+.font-family-bokor{font-family: var(--font-family-bokor);}
+.font-family-grenze{font-family: var(--font-family-grenze);}
+.font-family-latin{font-family: var(--font-family-latin);}
+.font-family-elite{font-family: var(--font-family-elite);}
