@@ -54,6 +54,7 @@ img{vertical-align: top;}
 body{
     font-size: var(--font-size-regular);
     background-color: var(--color-bg);
+    color: var(--color-lightgray);
 }
 .inner{
     max-width: 1200px;
@@ -194,14 +195,88 @@ body{
 /* smoke border */
 .smoke{
     width: 100%;
-    position: absolute;
-    top: -10%;/*조정*/
+    display: block;
+    margin-top: -10%;
 }
 .smoke img{
     width:100%;
     height: auto;
     filter: brightness(30%);
 }
+
+/* main > section */
+.section{
+    padding: 100px 0;
+    border: 1px solid orange;
+}
+.flex_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+}
+.section_title{
+    font-family: var(--font-family-grenze);
+    font-size: var(--font-size-large);
+    margin-bottom: 30px;
+}
+.art_container.grid_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.article{
+    width: inherit;
+    text-align: center;
+    padding: 20px; 
+}
+.art_container .art_icon{
+    min-width: 100px;
+    height: 100px;
+    padding: 20px;
+}   
+.art_container .art_icon > img{
+    width: auto;
+    height: 100%;
+}
+.art_title{
+    font-family: var(--font-family-grenze);
+    font-size: var(--font-size-medium);
+    margin-bottom: 20px;
+}
+.art_container .art_content{
+    width: inherit;
+    font-family: var(--font-family-latin);
+    line-height: var(--font-size-medium);
+    text-align: left;
+    word-break: break-all;
+}
+/* summary */
+.article.art_summary{
+    border: 2px solid rgba(150,150,150, 0.9);
+    transition: all .3s;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.article.art_summary:hover{
+    transform: scale(1.1);
+    border-color: var(--color-gold);
+}
+.summary_box01{
+    background-image: url(../images/movie_bg.jpg) ;
+}
+.summary_box02{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url(../images/Hero02.png);
+}
+.summary_box03{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url(../images/Hogwarts.png);
+}
+
+
 
 /* footer */
 .footer{
