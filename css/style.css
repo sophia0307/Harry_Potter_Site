@@ -57,6 +57,7 @@ body{
 }
 .inner{
     max-width: 1200px;
+    padding: 0 20px;
     margin: auto;
     background-color: rgba(200,200,200,0.4);
 }
@@ -108,11 +109,13 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.navbar_container .logo .logo_link{ 
+.navbar_container .logo .logo_link,
+.logo_link{ 
     display: inline-block;
     height: 65px;
 }
-.navbar_container .logo .logo_link > img{
+.navbar_container .logo .logo_link > img,
+.logo_link > img{
     height: inherit;
     width: auto;
 }
@@ -200,10 +203,30 @@ body{
     filter: brightness(30%);
 }
 
-
-
-
-
+/* footer */
+.footer{
+    color: var(--color-lightgray);
+    background: url(../images/footer_bg.png) no-repeat center / cover;
+    border-top: 1px solid rgba(150,150,150, .3);
+}
+.footer_menu{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.nav_menu.footer_menu > li > a{
+    display: inline-block;
+    padding: 20px 20px 10px;
+}
+/* copyright */
+.copyright_contain{
+    padding: 30px 0;
+    border-top: 1px solid rgba(150,150,150, .3);
+}
+.copyright_contain .copyright{
+    font-family: var(--font-family-latin);
+    font-size: var(--font-size-small);
+    color: var(--color-gray);
+}
 
 
 /* font family 확인용 */
