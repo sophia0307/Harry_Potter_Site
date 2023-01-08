@@ -60,7 +60,7 @@ body{
     max-width: 1200px;
     padding: 0 20px;
     margin: auto;
-    background-color: rgba(200,200,200,0.4);
+    /* background-color: rgba(200,200,200,0.4); */
 }
 
 /* btn */
@@ -207,7 +207,7 @@ body{
 /* main > section */
 .section{
     padding: 100px 0;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
 .flex_container{
     display: flex;
@@ -223,8 +223,6 @@ body{
 .art_container.grid_container{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
 }
 .article{
     width: inherit;
@@ -253,6 +251,10 @@ body{
     word-break: break-all;
 }
 /* summary */
+.summary_container.grid_container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 .article.art_summary{
     border: 2px solid rgba(150,150,150, 0.9);
     transition: all .3s;
@@ -276,6 +278,26 @@ body{
     url(../images/Hogwarts.png);
 }
 
+/* movie Scenario */
+.scenario_container.grid_container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.scenario_container .article .art_content{
+    margin-bottom: 20px;
+}
+.scenario_container .article > img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.article.art_scenario{
+    border: 2px solid rgba(150,150,150, 0.9);
+    transition: all .3s;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 /* footer */
