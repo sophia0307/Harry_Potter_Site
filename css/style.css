@@ -250,7 +250,7 @@ body{
     text-align: left;
     word-break: break-all;
 }
-/* summary */
+/* main > summary */
 .summary_container.grid_container{
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -278,25 +278,21 @@ body{
     url(../images/Hogwarts.png);
 }
 
-/* movie Scenario */
-.scenario_container.grid_container{
+/* main > movie Scenario & Hogwarts */
+.scenario_container.grid_container,
+.hogwarts_container.grid_container{
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
-.scenario_container .article .art_content{
-    margin-bottom: 20px;
+.scenario_container .article .art_content,
+.hogwarts_container .article .art_content{
+    margin-bottom:30px;
 }
-.scenario_container .article > img{
+.scenario_container .article > img,
+.hogwarts_container .article > img{
     width: 100%;
     height: auto;
     border-radius: 5px;
-}
-.article.art_scenario{
-    border: 2px solid rgba(150,150,150, 0.9);
-    transition: all .3s;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
