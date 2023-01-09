@@ -29,3 +29,43 @@ controlBtn.forEach((button)=>{
     });
 });
 
+// Main > Trailer 동영상 캐러셀
+const prevBtn = document.querySelector('#prev');
+const nextBtn = document.querySelector('#next');
+const trailerContainer = document.querySelector('.trailer_container');
+const trailerContent = document.querySelectorAll('.trailer_content');
+const trailerCount = trailerContent.length;
+const trailerFullWidth = trailerContainer.offsetWidth;
+const trailerWidth = trailerContainer.offsetWidth / trailerCount;
+let count = '';
+// next button
+function nextCount(){
+    count--;
+    trailerContainer.style.transform = `translateX(-${-count * trailerWidth}px)`;
+    console.log('nextCount :',count);
+    console.log(-count * trailerWidth);
+    if((-count * trailerWidth)==(trailerFullWidth-trailerWidth)){
+        console.log('nextCount : stop');
+        nextBtn.disabled = true;
+    }else{
+        prevBtn.disabled = false;
+    }
+};
+// prev button
+function prevCount(){
+    count++;
+    trailerContainer.style.transform = `translateX(${count * trailerWidth}px)`;
+    console.log('prevCount :',count);
+    console.log(count * trailerWidth);
+    if(count==0){
+        console.log('prevCount : stop');
+        prevBtn.disabled = true;
+    }else{
+        nextBtn.disabled = false;
+    }
+};
+// 초기값 - prev버튼 비활성화
+prevBtn.disabled = true; 
+// Main > Trailer 버튼 이벤트 호출
+prevBtn.addEventListener('click',prevCount);
+nextBtn.addEventListener('click',nextCount);
