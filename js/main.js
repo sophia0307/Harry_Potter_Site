@@ -29,6 +29,8 @@ controlBtn.forEach((button)=>{
     });
 });
 
+//////////////////////////////////////////////////////////////////////
+
 // Main > Trailer 동영상 캐러셀
 const prevBtn = document.querySelector('#prev');
 const nextBtn = document.querySelector('#next');
@@ -69,3 +71,16 @@ prevBtn.disabled = true;
 // Main > Trailer 버튼 이벤트 호출
 prevBtn.addEventListener('click',prevCount);
 nextBtn.addEventListener('click',nextCount);
+
+//////////////////////////////////////////////////////////////////////
+
+// Toggle Button event
+const toggleBtn = document.querySelector('.toggle_btn');
+const navMenu = document.querySelector('.header .nav_menu');
+const snsLink = document.querySelector('.header .sns_link');
+
+toggleBtn.addEventListener('click',()=>{
+    navMenu.classList.toggle('active');
+    snsLink.classList.toggle('active');
+    toggleBtn.classList.toggle('active');
+});

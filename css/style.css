@@ -127,7 +127,8 @@ body{
     align-items: center;
 }
 .nav_menu > li > a,
-.sns_link > li > a{
+.sns_link > li > a,
+.toggle_btn{
     padding: 12px 20px;
     font-size: 1.3rem;
     font-weight: var(--font-weight-semiBold);
@@ -143,24 +144,30 @@ body{
 .sns_link > li > a:hover > i{
     transition: all .3s;
 }
-.nav_menu > li > a:hover{
+.nav_menu > li > a:hover,
+.toggle_btn:hover{
     color: var(--color-gold);
 }
 .sns_link > li > a:hover > img,
 .sns_link > li > a:hover > i{
     transform: scale(1.2);
 }
+.toggle_btn{
+    display: none;
+}
 /* header intro */
 .intro{
     width: 100%;
-    margin-top: 100px;
+    height: inherit;
+    display: flex;
+    align-items: center;
 }
 .intro_container{
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 0;
+    padding: 5em;
     margin: auto;
     background-color: rgba(50, 50, 50, 0.5);
     z-index: 1;
@@ -182,6 +189,8 @@ body{
     font-size: var(--font-size-xlarge);
 }
 .intro_container > p{
+    text-align: center;
+    line-height: var(--font-size-medium);
     margin-bottom: 50px;
     font-family: var(--font-family-elite);
 }
@@ -207,7 +216,6 @@ body{
 /* main > section */
 .section{
     padding: 100px 0;
-    /* border: 1px solid orange; */
 }
 .flex_container{
     display: flex;
@@ -337,6 +345,7 @@ article.characters_img{
     background-color: var(--color-btn);
     cursor: pointer;
     transition: all .6s;
+    margin-bottom: 10px;
 }
 .button_container .control_btn:hover{
     color: var(--color-gold);
@@ -371,6 +380,7 @@ article.characters_img{
     display: inline-flex;
     align-items: center;
     gap: 20px;
+    position:relative;
 }
 .trailer_wrap > button{
     width: 50px;
@@ -435,9 +445,117 @@ article.characters_img{
     color: var(--color-gray);
 }
 
+/* screen 1024 미만 - 공통 */
+@media screen and (max-width: 1023px) {
+    /* header nav */
+    .header .navbar{
+        padding: 0;
+        position: fixed;
+    }
+    .header .navbar_container{
+        background-color: #777;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding: 20px 0;
+    }
+    .header .logo_link{
+        padding:0 20px;
+    }
+    .header .toggle_btn{
+        display: block;
+        position: absolute;
+        top: 36px;
+        right:20px;
+        padding: 0;
+    }
+    .header .nav_menu{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .header .sns_link{
+        width: 100%;
+        justify-content: center;
+        padding: 20px 0 0;
+        border-top: 1px solid rgba(150,150,150, .3);
+    }
+    .header .nav_menu > li{
+        width: 100%;
+        text-align: center;
+    }
+    .header .nav_menu > li > a{
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+    }
+    .header .nav_menu > li > a:hover{
+        background-color: #666666;
+    }
+    .header .nav_menu, .header .sns_link{
+        display: none;
+    }
+    .header .nav_menu.active, .header .sns_link.active{
+        display: flex;
+    }
+    .header .toggle_btn.active{
+        color: var(--color-gold);
+    }
+    /* header intro */
+    .intro_container{
+        padding: 3em;
+    }
+}
 
-/* font family 확인용 */
-.font-family-bokor{font-family: var(--font-family-bokor);color:beige;}
-.font-family-grenze{font-family: var(--font-family-grenze);color:beige;}
-.font-family-latin{font-family: var(--font-family-latin);color:beige;}
-.font-family-elite{font-family: var(--font-family-elite);color:beige;}
+/* screen 767~320px */
+@media screen and (max-width: 767px) and (min-width: 320px) {
+    /* btn */
+    .btn{
+        padding: 12px 16px;
+    }
+    /* header intro */
+    .intro_container{
+       width: 100%;
+       padding: 20px;
+       text-align: center;
+    }
+    .intro_container .intro_title{
+        line-height: 2em;
+    }
+    /* main > summary */
+    .summary_container.grid_container{
+        grid-template-columns: 1fr;
+    }
+    /* main > movie Scenario & Hogwarts */
+    .scenario_container.grid_container,
+    .hogwarts_container.grid_container,
+    .characters_container.grid_container{
+        grid-template-columns: 1fr;
+    }
+    .scenario_container .article:nth-child(1), 
+    .hogwarts_container .article:nth-child(1){
+        order:2;
+    }
+    .button_container > button{
+        width: 100%;
+    }
+    .trailer iframe{
+        width: 100%;
+    }
+    .trailer_wrap > button{
+        display: none;
+    }
+    /* .trailer_cover{
+        overflow: scroll;
+    } */
+
+    /* footer */
+    .footer .navbar_container{
+        flex-direction: column;
+    }
+    .footer .sns_link{
+       padding-top:20px;
+    }
+}
