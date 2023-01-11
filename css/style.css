@@ -400,6 +400,9 @@ article.characters_img{
 .trailer_wrap > button:hover{
     transform: scale(1.2);
 }
+.trailer_wrap > button#prev{order:1;}
+.trailer_wrap > button#next{order:3;}
+.trailer_wrap > .trailer_cover{order:2;}
 .trailer_cover{
     max-width:560px;
     margin: auto;
@@ -418,6 +421,9 @@ article.characters_img{
     height: 100%;
     overflow: hidden;
     padding: 10px;
+}
+iframe{
+    border: 1px solid transparent;
 }
 
 /* footer */
@@ -453,7 +459,7 @@ article.characters_img{
         position: fixed;
     }
     .header .navbar_container{
-        background-color: #777;
+        background-color: var(--color-bg);
         flex-direction: column;
         align-items: flex-start;
         position: relative;
@@ -491,9 +497,6 @@ article.characters_img{
         width: 100%;
         padding: 12px 0;
     }
-    .header .nav_menu > li > a:hover{
-        background-color: #666666;
-    }
     .header .nav_menu, .header .sns_link{
         display: none;
     }
@@ -510,12 +513,19 @@ article.characters_img{
 }
 
 /* screen 767~320px */
-@media screen and (max-width: 767px) and (min-width: 320px) {
+@media screen and (max-width: 767px){
     /* btn */
     .btn{
         padding: 12px 16px;
     }
+    /* header nav */
+    .navbar{
+        width: 100%;
+    }
     /* header intro */
+    .header .intro .inner{
+        padding:0;
+    }
     .intro_container{
        width: 100%;
        padding: 20px;
@@ -524,11 +534,18 @@ article.characters_img{
     .intro_container .intro_title{
         line-height: 2em;
     }
+    /* main */
+    .article{
+        padding: 0;
+    }
     /* main > summary */
+    .art_summary{
+        padding: 20px;
+    }
     .summary_container.grid_container{
         grid-template-columns: 1fr;
     }
-    /* main > movie Scenario & Hogwarts */
+    /* main > movie Scenario & Hogwarts & Characters */
     .scenario_container.grid_container,
     .hogwarts_container.grid_container,
     .characters_container.grid_container{
@@ -541,16 +558,24 @@ article.characters_img{
     .button_container > button{
         width: 100%;
     }
+    .characters_container .characters_contents{
+        text-align: center;
+    }
+    /* main > trailer */
+    .trailer_wrap{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
     .trailer iframe{
         width: 100%;
     }
     .trailer_wrap > button{
-        display: none;
+        margin: 20px;
     }
-    /* .trailer_cover{
-        overflow: scroll;
-    } */
-
+    .trailer_wrap > button:hover{
+        transform: none;
+    }
     /* footer */
     .footer .navbar_container{
         flex-direction: column;

@@ -44,10 +44,10 @@ let count = '';
 function nextCount(){
     count--;
     trailerContainer.style.transform = `translateX(-${-count * trailerWidth}px)`;
-    console.log('nextCount :',count);
-    console.log(-count * trailerWidth);
+    // console.log('nextCount :',count);
+    // console.log(-count * trailerWidth);
     if((-count * trailerWidth)==(trailerFullWidth-trailerWidth)){
-        console.log('nextCount : stop');
+        // console.log('nextCount : stop');
         nextBtn.disabled = true;
     }else{
         prevBtn.disabled = false;
@@ -57,10 +57,10 @@ function nextCount(){
 function prevCount(){
     count++;
     trailerContainer.style.transform = `translateX(${count * trailerWidth}px)`;
-    console.log('prevCount :',count);
-    console.log(count * trailerWidth);
+    // console.log('prevCount :',count);
+    // console.log(count * trailerWidth);
     if(count==0){
-        console.log('prevCount : stop');
+        // console.log('prevCount : stop');
         prevBtn.disabled = true;
     }else{
         nextBtn.disabled = false;
