@@ -1,7 +1,7 @@
 # Harry Potter Site
 
 * 주제 : 영화 해리포터 입문자(해린이)들을 위한 등장인물과 영화에 대한 정보를 담은 반응형 데모 사이트입니다.
-* 제작 기간 : 2022.12.24~2023.01.01 (9일)
+* 제작 기간 : 2023.01.03 ~ 2023.01.11 (9일)
 * 기여도 : 기획 & 디자인 100% + 퍼블리싱 100%
 * 사용 스택 : Photoshop, HTML5, CSS, Javascript
 * URL : https://harrypotterdemosite.netlify.app/
