@@ -11,4 +11,5 @@
  flex와 grid를 이용하여 레이아웃을 구성하고 반응형으로 제작하여 사용자가 어떤 기기로도 즐길 수 있게 하였습니다.
             
 * 결과물(pc버전)
- > https://user-images.githubusercontent.com/87598334/211575377-54822b64-5d63-46ac-a80e-468ecce42372.mp4
+ <img width="50%" src="https://user-images.githubusercontent.com/87598334/211575377-54822b64-5d63-46ac-a80e-468ecce42372.mp4"/>
+
